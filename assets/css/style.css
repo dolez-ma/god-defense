@@ -1,0 +1,36 @@
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    align-items: center;
+    background: #eee;
+    display:flex;
+    height: inherit;
+    justify-content: center;
+    margin: 0;
+    width: inherit;
+}
+
+.hiddenText {
+    font-family: 'Raleway', sans-serif;
+    visibility: hidden;
+}
+
+.version {
+    bottom: 0;
+    color: #777;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    left: 10px;
+    letter-spacing: 1px;
+    position: absolute;
+}
+
+canvas {
+    border-radius: 10px;
+}

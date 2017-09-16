@@ -81,7 +81,7 @@ function transcode(){
     
     return browserify({
         paths: [path.join(__dirname, 'app')],
-        entries: RESULT_FILE,
+        entries: START_FILE,
         debug: true,
         transform: [
             [
@@ -131,7 +131,7 @@ gulp.task('transcode', ['copyLibs'], transcode);
 gulp.task('fastTranscode', transcode);
 gulp.task('run', ['transcode'], run);
 
-gulp.task('watch-js', ['fastBuild'], browserSync.reload);
+gulp.task('watch-js', ['fastTranscode'], browserSync.reload);
 gulp.task('watch-assets', ['copyLibs'], browserSync.reload);
 
 gulp.task('default', ['run']);
