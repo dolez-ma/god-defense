@@ -4,8 +4,10 @@ export default {
         'tile-pink'
     ],
     spritesheets: [
-        {name: 'button', width: 96, height: 48 },
+        {name: 'buttons2', width: 96, height: 48 },
     ],
-    atlases: [],
+    atlases: [
+        'spritesheet_enemies'
+    ],
     audios: []
 };

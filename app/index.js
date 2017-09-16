@@ -3,6 +3,8 @@
  */
 import BootState from 'states/boot-state';
 import LoadState from 'states/load-state';
+import MenuState from 'states/menu-state';
+import PlayState from 'states/play-state';
 
 class GodDefense extends Phaser.Game {
     
@@ -12,6 +14,8 @@ class GodDefense extends Phaser.Game {
         
         this.state.add('boot', BootState, false);
         this.state.add('load', LoadState, false);
+        this.state.add('menu', MenuState, false);
+        this.state.add('play', PlayState, false);
         
         this.state.start('boot');
     }
