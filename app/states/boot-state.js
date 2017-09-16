@@ -2,7 +2,7 @@
 class BootState  extends Phaser.State {
     
     preload(){
-        this.game.load.image('loading-bar', 'img/progress-bar.png');
+        this.game.load.image('loading-bar', 'img/loading-bar.png');
     }
     
     create(){
