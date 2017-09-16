@@ -41,10 +41,25 @@ class LoadState extends Phaser.State {
     
     loadAssets(){
         ASSETS.images.forEach(image => this.loadImage(image));
+        ASSETS.spritesheets.forEach(spritesheet => this.loadSpritesheet(spritesheet));
+        ASSETS.audios.forEach(audio => this.loadAudio(audio));
+        ASSETS.atlases.forEach(atlas => this.loadAtlas(atlas));
     }
     
     loadImage(name){
         this.game.load.image(name, `img/${name}.png`);
+    }
+    
+    loadSpritesheet(spritesheet){
+        this.game.load.spritesheet(spritesheet.name, `img/${spritesheet.name}.png`, spritesheet.width, spritesheet.height);
+    }
+    
+    loadAudio(audio){
+        this.game.load.audio(audio.name, audio.files.map(file => `audio/${file}`));
+    }
+    
+    loadAtlas(atlas){
+        this.game.load.atlas(atlas, `img/${atlas}.png`, `img/${atlas}.xml`, null, Phaser.Loader.TEXTURE_ATLAS_XML_STARLING);
     }
 }
 
